@@ -1,14 +1,14 @@
 <template>
-<registerPage></registerPage>
+<porfilePage></porfilePage>
 </template>
 
 <script>
-import registerPage from './components/othersPage/registerPage.vue';
+import porfilePage from './components/profilePage/main.vue';
 
 export default {
   name: 'App',
   components: {
-    registerPage
+    porfilePage
   }
 }
 </script>
