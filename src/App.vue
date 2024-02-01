@@ -1,14 +1,14 @@
 <template>
-<loginPage></loginPage>
+<registerPage></registerPage>
 </template>
 
 <script>
-import loginPage from './components/othersPage/loginPage.vue';
+import registerPage from './components/othersPage/registerPage.vue';
 
 export default {
   name: 'App',
   components: {
-    loginPage
+    registerPage
   }
 }
 </script>

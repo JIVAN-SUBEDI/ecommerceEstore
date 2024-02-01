@@ -1,7 +1,7 @@
 <template>
     <headerVue/>
     <navbarVue/>
-    <div class="container">
+    <div class="container_main">
         <div class="login_container">
             <h2>Sign Up</h2>
             <div class="flex">
@@ -47,7 +47,7 @@ export default{
 }
 </script>
 <style scoped>
-.container{
+.container_main{
     height: calc(100vh - 80px);
     display: flex;
     justify-content: center;
