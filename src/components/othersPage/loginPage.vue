@@ -1,4 +1,6 @@
 <template>
+    <headerVue/>
+    <navbarVue/>
     <div class="container">
         <div class="login_container">
             <h2>Login</h2>
@@ -12,7 +14,9 @@
             <div class="col">
                 <label for="">Password<span class="text-danger">*</span></label>
                 <input type="password" placeholder="password">
+                <a href="">Forgot Password?</a>
             </div>
+            <p>Doesn't have an account? <a href="">Signup</a></p>
         </div>
         <div class="button_Container">
             <button class="login">Login</button>
@@ -23,10 +27,15 @@
         </div>
     </div>
 </div>
+<footerVue/>
 </template>
 <script>
+import navbarVue from '../navbar.vue';
+import headerVue from '../header.vue';
+import footerVue from '../footer.vue';
 export default{
     name:"loginPage",
+    components:{navbarVue,headerVue,footerVue}
 }
 </script>
 <style scoped>
@@ -40,6 +49,7 @@ export default{
     width: 60%;
     padding: 1.5rem;
     background: #f2f2f2;
+    border-radius: 5px;
 }
 .flex{
     width:100%;
@@ -50,7 +60,9 @@ export default{
 }
 
 .col{
-    display: block;
+    /* display: block; */
+    display: flex;
+    flex-direction: column;
     margin-bottom: 1rem;
 }
 .col input{
@@ -61,7 +73,7 @@ export default{
     padding: 0 1rem;
     border-radius: 5px;
 }
-h3{
+h2{
     font-weight: 500;
     margin-bottom: 1.5rem;
 }
@@ -73,10 +85,14 @@ h3{
     width: 100%;
     border-radius: 5px;
     cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 svg{
     width: 15px;
     height: 15px;
+    fill: white;
 }
 .button_Container p{
 text-align: center;
@@ -88,9 +104,49 @@ margin-top:1rem;
     border: 2px solid #1f79ff;
     color: white;
 }
+.login:hover{
+    color: #1f79ff;
+    background: transparent;
+}
 .facebook{
     background:  #316FF6;
     border: 2px solid #316FF6;
+    margin-top: 1rem;
     
+}
+.facebook:hover svg {
+    fill: #316FF6;
+}
+.facebook:hover span{
+    color: #316FF6;
+    
+}
+.facebook:hover{
+    background: transparent;
+}
+label{
+    font-size: 0.8rem;
+}
+.socialMedia span{
+    margin-left: 0.5rem;
+    font-size: 1rem;
+    color: white;
+}
+.google{
+    margin-top: 1rem;
+    background: #EA4335;
+    border: 2px solid #EA4335;
+}
+.google:hover{
+    background: transparent;
+}
+.google:hover span{
+    color: #EA4335;
+}
+.google:hover svg{
+    fill: #EA4335;
+}
+.col a{
+    text-align: right;
 }
 </style>
